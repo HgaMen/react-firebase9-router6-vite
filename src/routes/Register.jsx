@@ -24,11 +24,7 @@ const Register = () => {
     formState: { errors },
     getValues,
     setError,
-  } = useForm({
-    defaultValues: {
-      email: 'hega1@test.com',
-    },
-  });
+  } = useForm();
 
   const onSubmit = async ({ email, password }) => {
     try {
@@ -85,7 +81,7 @@ const Register = () => {
         >
           <FormError error={errors.repassword} />
         </FormInput>
-        <Button text="Register" type="submit" loading={loading} />
+        <Button text="Register" type="submit" color="blue" loading={loading} />
       </form>
     </>
   );
